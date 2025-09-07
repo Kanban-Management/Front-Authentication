@@ -1,0 +1,66 @@
+.modern-input {
+    position: relative;
+    width: 100%;
+
+    input {
+        width: 100%;
+        padding: 1rem 2.5rem 1rem 0.75rem;
+        border: 1.5px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: transparent;
+        outline: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            border-color: #aaa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        &:focus {
+            border-color: #4a6cf7;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(74, 108, 247, 0.25);
+        }
+
+        &:focus ~ label,
+        &:not(:placeholder-shown) ~ label {
+            top: -0.6rem;
+            left: 0.75rem;
+            font-size: 0.75rem;
+            background: #fff;
+            padding: 0 0.3rem;
+            color: #4a6cf7;
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 0.75rem;
+        top: 1rem;
+        color: #888;
+        font-size: 0.95rem;
+        pointer-events: none;
+        transition: all 0.25s ease;
+    }
+
+    .toggle-password {
+        position: absolute;
+        top: 50%;
+        right: 0.75rem;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #666;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: #4a6cf7;
+        }
+    }
+}
